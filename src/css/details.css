@@ -1,0 +1,201 @@
+section .logo a {
+  display: block;
+}
+
+section .logo a img {
+  margin: 0 auto;
+}
+
+section nav {
+  border-top: 2px solid #e10164;
+  margin-top: 20px;
+  padding-top: 10px;
+}
+
+section nav .nav li {
+  float: left;
+  margin-right: 60px;
+}
+
+section nav .nav li a {
+  display: block;
+  font-size: 16px;
+  color: #000;
+  line-height: 20px;
+}
+
+section nav .nav li a:hover {
+  color: #aaa;
+}
+
+section nav .nav li:nth-of-type(11) {
+  margin-left: 20px;
+  margin-right: 0px;
+}
+
+section nav .nav li:nth-of-type(11) a {
+  width: 80px;
+  height: 20px;
+  position: relative;
+}
+
+section nav .nav li:nth-of-type(11) a i {
+  font-size: 18px;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 0;
+}
+
+section nav .nav li:nth-of-type(11) a span {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+section nav .nav li:nth-of-type(11):hover i {
+  display: none;
+}
+
+section nav .nav li:nth-of-type(11):hover span {
+  display: block;
+}
+
+section .details {
+  margin-top: 40px;
+}
+
+section .details .d_img .big img {
+  width: 385px;
+  height: 520px;
+}
+
+section .details .d_img ul {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+section .details .d_img ul li {
+  float: left;
+  width: 52px;
+  height: 72px;
+  position: relative;
+}
+
+section .details .d_img ul li img {
+  width: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+section .details .d_img ul li:nth-of-type(1) img {
+  border: 1px solid #000;
+}
+
+section .details .d_con {
+  margin-left: 50px;
+  width: 560px;
+}
+
+section .details .d_con h3 {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+section .details .d_con .price {
+  height: 135px;
+  background-color: #f7f7f7;
+  margin-top: 25px;
+  padding-left: 15px;
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+
+section .details .d_con .price .left .sellPrice {
+  display: block;
+}
+
+section .details .d_con .price .left .sellPrice i {
+  font-size: 20px;
+  color: #e50065;
+}
+
+section .details .d_con .price .left .sellPrice > span:nth-of-type(1) {
+  font-size: 36px;
+  color: #e50065;
+  margin-left: 5px;
+}
+
+section .details .d_con .price .left .sellPrice > span:nth-of-type(2) {
+  color: #666;
+  margin-left: 5px;
+}
+
+section .details .d_con .price .left .sellPrice > span:nth-of-type(3) {
+  margin: 0;
+  background-color: #e50065;
+  color: #fff;
+  display: block;
+  height: 18px;
+  width: 40px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 18px;
+  position: relative;
+  top: -45px;
+  left: 100px;
+}
+
+section .details .d_con .price .left .sellPrice > span:nth-of-type(3) > span {
+  display: block;
+  border: 9px solid transparent;
+  border-right: 10px solid #e50065;
+  position: absolute;
+  left: -19px;
+  top: 0px;
+}
+
+section .details .d_con .price .left > span:nth-of-type(2) {
+  display: block;
+  margin-top: 10px;
+  color: #666;
+  font-size: 14px;
+}
+
+section .details .d_con .price .left > span:nth-of-type(2) a {
+  color: #000;
+}
+
+section .details .d_con .price .left > span:nth-of-type(2) a:hover {
+  color: #f00;
+}
+
+section .details .d_con .color {
+  margin-top: 40px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+section .details .d_con .color span {
+  color: #666;
+  float: left;
+  margin-right: 15px;
+}
+
+section .details .d_con .color ul {
+  float: left;
+}
+
+section .details .d_con .color ul li {
+  width: 95px;
+  height: 40px;
+  float: left;
+  margin-right: 10px;
+  border: 1px solid #000;
+  text-align: center;
+  line-height: 40px;
+}
