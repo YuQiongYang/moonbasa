@@ -1,10 +1,13 @@
 require.config({
 	paths:{
 		jquery:'../lib/jquery-3.2.1',
-		xcarousel:'../lib/jquery-xcarousel/jquery.xCarousel'
+		xcarousel:'../lib/jquery-xcarousel/jquery.xCarousel',
+		xzoom:'../lib/jquery-xZoom/jquery.xZoom',
+		common:'common'
 	},
 	shim:{
-		xcarousel:['jquery']
+		xcarousel:['jquery'],
+		xzoom:['jquery']
 	}
 	
 })

@@ -1,3 +1,9 @@
+%position{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+}
 section {
 	.logo {
 		a {
@@ -66,6 +72,40 @@ section {
 	.details{
 			margin-top:40px;
 			.d_img{
+				.zoom-small{
+					position:relative;
+					overflow:hidden;
+					img{
+						display:block;
+
+						.zoom{
+							display: none;
+							position: absolute;
+							width: 30px;
+							height: 30px;
+							border: 1px solid #fc0;
+							background-color: #ff0;
+							background-color: rgba(255, 255, 0, .3);
+							filter: alpha(Opacity=30);
+						}
+					}
+				}
+
+				.xzoom-big {
+						display: none;
+						position: absolute;
+						width: 400px;
+						height: 300px;
+						overflow: hidden;
+
+						img{
+							position: absolute;
+							left: 0;
+							right: 0;
+							z-index:10;
+						}
+					}
+
 				.big{
 					img{
 						width:385px;
@@ -83,10 +123,7 @@ section {
 							position:relative;
 							img{
 								width:50px;
-								position:absolute;
-								top:50%;
-								left:50%;
-								transform:translate(-50%,-50%);
+								@extend %position;
 							}
 						}
 						li:nth-of-type(1) img {
@@ -168,12 +205,13 @@ section {
 
 						.color{
 							margin-top:40px;
-							padding:0 10px;
-							box-sizing:border-box;
-							span{
+							>span{
 								color:#666;
 								float:left;
 								margin-right:15px;
+								margin-top:10px;
+								font-size:12px;
+
 							}
 							ul{
 								float:left;
@@ -182,13 +220,149 @@ section {
 									height:40px;
 									float:left;
 									margin-right:10px;
-									border:1px solid #000;
-									text-align:center;
-									line-height:40px;
+									position:relative;
+									span{
+										display:block;
+										width:92px;
+										height:37px;
+										text-align:center;
+										line-height:37px;
+										border:2px solid #ccc;
+										color:#333;
+										@extend %position;
+									}
+									&:hover{
+										span{
+										color:#e50065;
+										border:2px solid #e50065;
+										}
+
+									}
+								}
+								li:nth-of-type(1){
+									span{
+										border:2px solid #e50065;
+									}
 								}
 							}
 						}
 
+						.size{
+								margin-top:30px;
+							>span{
+								color:#666;
+								float:left;
+								margin-right:15px;
+								margin-top:5px;
+								font-size:12px;
+								float:left;
+							}
+							ul{
+								width:200px;
+								float:left;
+								li{
+									width:42px;
+									height:30px;
+									float:left;
+									margin-right:10px;
+									margin-bottom:5px;
+									span{
+										display:block;
+										width:40px;
+										height:28px;
+										border:1px solid #ccc;
+										text-align:center;
+										line-height:28px;
+										font-size:12px;
+									}
+									span.rs{
+										border:1px solid #ccc;
+									}
+									span.active{
+										border:1px solid  #e50065;
+									}
+
+									&:hover{
+										span{
+											color:#e50065;
+										}
+									}
+								}
+								li:nth-of-type(1){
+									span{
+										border:1px solid  #e50065;
+									}
+								}
+								li:nth-of-type(4n){
+									margin-right:0;
+								}
+							}
+						}
+
+					}
+
+					.num{
+						margin-top:30px;
+						>span:nth-of-type(1){
+								color:#666;
+								float:left;
+								margin-right:15px;
+								margin-top:8px;
+								font-size:12px;
+								float:left;
+						}
+						>span:nth-of-type(2){
+							display:block;
+							width:75px;
+							height:33px;
+							border:1px solid #ccc;
+							float:left;
+							padding-left:20px;
+							box-sizing:border-box;
+							line-height:30px;							
+							position:relative;
+							i{
+								display:block;
+								height:15px;
+								width:22px;
+								border:1px solid #ccc;
+								line-height:15px;
+								text-align:center;
+								font-size:18px;
+								color:#666;
+								float:right;
+								position:absolute;
+								right:-1px;
+							}
+							i:nth-of-type(1){
+								top:-1px;
+							}
+							i:nth-of-type(2){
+								bottom:-1px;
+							}
+						}
+					}
+					.buy{
+						width:445px;
+						margin-top:30px;
+						a{
+							display:block;
+							width:205px;
+							height:50px;
+							line-height:50px;
+							text-align:center;
+							font-size:18px;
+						}
+						.b_n{
+							float:left;
+							border:1px solid #e50065;
+							color:#e50065;
+						}
+						.cart{
+							float:right;
+							background-color:#e50065;
+							color:#fff;
+						}
 					}
 			}
 	}
