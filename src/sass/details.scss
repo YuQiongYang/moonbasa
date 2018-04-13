@@ -363,6 +363,72 @@ section {
 							background-color:#e50065;
 							color:#fff;
 						}
+
+					}
+						.buy_cart{
+							width:600px;
+							height:500px;
+							@extend %position;
+							top:500px;
+							background-color:#fff;
+							display:none;
+							z-index:11;
+							border:1px solid #000;
+							padding-top:60px;
+							box-sizing:border-box;
+
+							>h3{
+							text-align:center;
+						}
+						>span{
+							display:block;
+							text-align:center;
+							margin-top:15px;
+							margin-bottom:20px;
+
+						}
+							.success{
+								width:300px;
+								height:100px;
+								background:url(../img/logo.gif);
+								margin:0 auto;
+							}
+							div{
+								width:300px;
+								height:50px;
+								margin:0px auto;
+							a{
+								display:block;
+								width:120px;
+								height:50px;
+								line-height:50px;
+								text-align:center;
+								font-size:18px;
+							}
+
+							.reShop{
+
+							float:left;
+							border:1px solid #e50065;
+							color:#e50065;
+							}
+							.checkout{
+							float:right;
+							background-color:#e50065;
+							color:#fff;
+							}
+							}
+						}
+
+					.back{
+						width:100%;
+						height:1000px;
+						position:absolute;
+						top:0;
+						left:0;
+						z-index:1;
+						background:rgba(0,0,0,0.3);
+						display:none;
 					}
 			}
 	}

@@ -1,4 +1,4 @@
-section .details .d_img ul li img, section .details .d_con .color ul li span {
+section .details .d_img ul li img, section .details .d_con .color ul li span, section .details .buy_cart {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -382,4 +382,72 @@ section .details .buy .cart {
   float: right;
   background-color: #e50065;
   color: #fff;
+}
+
+section .details .buy_cart {
+  width: 600px;
+  height: 500px;
+  top: 500px;
+  background-color: #fff;
+  display: none;
+  z-index: 11;
+  border: 1px solid #000;
+  padding-top: 60px;
+  box-sizing: border-box;
+}
+
+section .details .buy_cart > h3 {
+  text-align: center;
+}
+
+section .details .buy_cart > span {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+section .details .buy_cart .success {
+  width: 300px;
+  height: 100px;
+  background: url(../img/logo.gif);
+  margin: 0 auto;
+}
+
+section .details .buy_cart div {
+  width: 300px;
+  height: 50px;
+  margin: 0px auto;
+}
+
+section .details .buy_cart div a {
+  display: block;
+  width: 120px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 18px;
+}
+
+section .details .buy_cart div .reShop {
+  float: left;
+  border: 1px solid #e50065;
+  color: #e50065;
+}
+
+section .details .buy_cart div .checkout {
+  float: right;
+  background-color: #e50065;
+  color: #fff;
+}
+
+section .details .back {
+  width: 100%;
+  height: 1000px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.3);
+  display: none;
 }

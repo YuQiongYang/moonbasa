@@ -115,12 +115,30 @@ require(['config'], function() {
 						}
 
 						//增加或减少数量
-						$('.num').on('click','i',function(){
-							
-						});
+						// $('.num').on('click','i',function(){
+						// 	if($('.add')){
+						// 		$('.num').children('span')[1].children[0].innerText = currRes++ +1;
+						// 		console.log(currRes)
+						// 	}
+						// });
+
+						let currRes = Number($('.num').children('span')[1].children[0].innerText);
+						$('.add').on('click',function(){
+							$('.num').children('span')[1].children[0].innerText = currRes++ +1;
+						})
+
+						$('.reduce').on('click',function(){
+							if(currRes<=1){
+								currRes =1;
+							}else{
+							$('.num').children('span')[1].children[0].innerText = currRes-- -1;
+							}
+
+						})
+
 
 						//读取cookie
-						let goodslist = Cookie.get('goods') || [];
+						let goodslist = Cookie.get('moon') || [];
 						if (typeof goodslist === 'string') {
 							goodslist = JSON.parse(goodslist);
 						}
@@ -137,7 +155,6 @@ require(['config'], function() {
 									currSize = $(size[0]).text();
 								}
 							}
-
 
 							//获取颜色
 
@@ -157,24 +174,50 @@ require(['config'], function() {
 							});
 
 							if (has) {
-								goodslist[idx].qty++;
+								goodslist[idx].qty += currRes;
+								goodslist[idx].color = currColor;
+								goodslist[idx].size = currSize;
 							} else {
+
 								let moon = {
 									guid: good_id,
 									name : goods.likeName,
 									price: goods.sellPrice,
 									size : currSize,
+									imgurl:goods.likeImg,
 									color: currColor,
-									qty: 1
+									qty: currRes
 								}
 
 								goodslist.push(moon);
-							}
+							}	
 								console.log(goodslist);
 
-							document.cookie = 'goods=' + JSON.stringify(goodslist);
+							document.cookie = 'moon=' + JSON.stringify(goodslist);
 
 						});
+
+						//点击购物车
+							$('.cart').on('click',function(){
+								$('.buy_cart').show();
+								$('.back').show();
+							});
+
+						//点击继续购物
+							$('.reShop').on('click',function(){
+								$('.buy_cart').hide();
+								$('.back').hide();
+							});
+
+						//点击立即购买
+							$('.b_n').on('click',function(){
+								$(this).attr('href','../html/shopping_cart.html');
+							});
+
+						//点击去结账
+							$('.checkout').on('click',function(){
+								$(this).attr('href','../html/shopping_cart.html')
+							})
 					}
 
 
