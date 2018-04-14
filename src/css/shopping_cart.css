@@ -216,7 +216,7 @@ section .cartbody .checkout .eq {
 }
 
 section .cartbody .checkout .count {
-  margin-top: 90px;
+  margin-top: 70px;
   margin-right: 50px;
 }
 
@@ -238,4 +238,16 @@ section .cartbody .checkout .count p:nth-of-type(2) {
 section .cartbody .checkout .count p:nth-of-type(2) .resNum {
   color: #d90077;
   font-size: 18px;
+}
+
+section .cartbody .checkout .count > a {
+  display: block;
+  width: 225px;
+  height: 50px;
+  background-color: #d90077;
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  margin-top: 15px;
 }

@@ -5,6 +5,7 @@ require(['config'], function() {
 				//获取cookie
 				let goodslist;
 				$('.goods').html();
+				let cash = 0;
 				render();
 				
 			function render() {
@@ -18,7 +19,6 @@ require(['config'], function() {
 
 				}
 
-				let cash = 0;
 
 
 				let $res = $.map(goodslist, function(data) {
@@ -37,7 +37,7 @@ require(['config'], function() {
 						$('<span/>').text('尺寸：' + data.size), $('<span/>').text('颜色：' + data.color));
 					let $price = $('<li/>').append($('<span/>').text('￥' + data.price));
 					let $qty = $('<li/>').append($('<span/>').addClass('shuliang').append(($('<input/>').val(data.qty).addClass('num')), $('<i/>').text('+').addClass('add'), $('<i/>').text('-').addClass('reduce')));
-					let $sum = $('<li/>').append($('<span/>').text('￥' + cash).addClass('sum'));
+					let $sum = $('<li/>').append($('<span/>').text('￥' ),$('<span/>').text(cash).addClass('sum'));
 					let $sure_remove = $('<div/>').append($('<p/>').text('你确定要删除此商品？'), $('<a/>').attr('href','#').text('确定'),$('<a/>').attr('href','#').text('取消'),$('<i/>'),$('<i/>')).addClass('sure_remove');
 					let $remove = $('<li/>').append($('<a/>').attr('href', '#').text('移除').addClass('remove'),$sure_remove);
 
@@ -108,21 +108,25 @@ require(['config'], function() {
 				let totalMoney =0;
 
 				let $total = $('.num');
-				let $totalMoney = $('.sum').text();
+				let $totalMoney = $('.sum');
 				for(let i=0;i<$total.length;i++){
 					total += $total[i].value*1;
+
+				for(let j=0;j<goodslist.length;j++){
+					totalMoney+=goodslist[j].price*$total[i].value*1;
+					if(goodslist.length===1){
+					$('.resNum').text(totalMoney+ '元')
+					}else{
+						
+				$('.resNum').text(totalMoney/2 + '元')
+					}
+				}
 				}
 				$('.discount').text(total+'件');
 
-				let idx;
-				for(let i =0;i<goodslist.length;i++){
-					idx = i;
-					totalMoney = goodslist[idx].qty * goodslist[idx].price;
-					console.log(goodslist[idx].qty * goodslist[idx].price)
-				}
-				
-				$('.resNum').text(totalMoney + '元')
-					
+				console.log(total)
+	
+					// console.log(cash)
 				}
 
 				$('.sure_remove').on('click',function(e){

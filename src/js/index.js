@@ -5,7 +5,17 @@ require(['config'],function(){
 ;jQuery(function($){
 	
 // $('header').load('header.html');
+	//登陆注册跳转
+	let $login = $('.log');
+	let $reg = $('.reg');
+	$login.click(function(){
+		$login.attr('href','../html/login.html');
+	});
 
+	$reg.click(function(){
+		console.log(123)
+		$reg.attr('href','../html/reg.html');
+	})
 	
 	let $carousel = $('.carousel');
 	let $horizontal = $('.horizontal');

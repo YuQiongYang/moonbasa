@@ -34,11 +34,7 @@ require(['config'], function() {
 							return $li;
 						});
 						$ul_small.append($res).appendTo($('.d_img'));
-
-						// //放大镜
-						// $('.big').xZoom({
-
-						// })
+						
 
 
 
@@ -114,13 +110,6 @@ require(['config'], function() {
 
 						}
 
-						//增加或减少数量
-						// $('.num').on('click','i',function(){
-						// 	if($('.add')){
-						// 		$('.num').children('span')[1].children[0].innerText = currRes++ +1;
-						// 		console.log(currRes)
-						// 	}
-						// });
 
 						let currRes = Number($('.num').children('span')[1].children[0].innerText);
 						$('.add').on('click',function(){
@@ -134,7 +123,10 @@ require(['config'], function() {
 							$('.num').children('span')[1].children[0].innerText = currRes-- -1;
 							}
 
-						})
+						});
+
+						//放大镜
+						// magnifier($('.big'),385,520,$('.big').children('img')[0].src,100,135,385);
 
 
 						//读取cookie
@@ -198,9 +190,16 @@ require(['config'], function() {
 						});
 
 						//点击购物车
+						let total = 0;
 							$('.cart').on('click',function(){
 								$('.buy_cart').show();
 								$('.back').show();
+								for(let i =0;i<goodslist.length;i++){
+									console.log(goodslist[i].qty)
+									total+=goodslist[i].qty*1;
+								}
+								$('.shop_cart_num').text(total);
+								console.log(total)
 							});
 
 						//点击继续购物

@@ -61,10 +61,10 @@ let browserSync = require('browser-sync');
 gulp.task('server',()=>{
 	browserSync({
 		// 服务器路径
-		server:'./src/',
+		// server:'./src/',
 
 		// 代理服务器
-		// proxy:'http://localhost:0704',
+		proxy:'http://localhost:9774',
 
 		// 端口
 		// port:0704,
