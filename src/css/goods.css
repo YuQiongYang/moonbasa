@@ -378,7 +378,7 @@ section .details .buy .b_n {
   color: #e50065;
 }
 
-section .details .buy .cart {
+section .details .buy .add_cart {
   float: right;
   background-color: #e50065;
   color: #fff;

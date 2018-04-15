@@ -1,6 +1,5 @@
 require(['config'], function() {
-	require(['jquery', 'xcarousel', 'xzoom', 'common'], function($) {
-
+	require(['jquery', 'xcarousel', 'xzoom', 'common','header'], function($) {
 		jQuery(function($) {
 
 			let good_id = location.search.slice(1);
@@ -13,6 +12,7 @@ require(['config'], function() {
 						//对应id号的商品信息
 						var goods = data_arr[data_arr.id - 1];
 						let $img = $('<img/>').attr('src', '../' + goods.likeImg).appendTo($('.big'));
+						
 
 						let $ul_small = $('<ul/>').addClass('clearfix');
 
@@ -21,6 +21,8 @@ require(['config'], function() {
 							let $img = $('<img/>');
 							let $li = $('<li/>');
 							$img.attr('src', '../' + url).appendTo($li);
+
+							//触摸小图切换大图
 							$li.on('mouseenter', $img, function() {
 								let $imgAll = $ul_small.children('li').children('img');
 								$imgAll.css('border', 'none');
@@ -30,8 +32,6 @@ require(['config'], function() {
 							return $li;
 						});
 						$ul_small.append($res).appendTo($('.d_img'));
-						
-
 
 
 						//获取数据详情
@@ -182,17 +182,30 @@ require(['config'], function() {
 
 						});
 
+						//放大镜
+						$('.big').xZoom({
+							width:385,
+							height:520
+						})
+
+
 						//点击购物车
 						let total = 0;
-							$('.cart').on('click',function(){
-								$('.buy_cart').show();
+							$('.add_cart').on('click',function(e){
 								$('.back').show();
+								$('.buy_cart').show();
 								for(let i =0;i<goodslist.length;i++){
 									console.log(goodslist[i].qty)
 									total+=goodslist[i].qty*1;
 								}
-								$('.shop_cart_num').text(total);
-								console.log(total)
+								$('.shop_cart_num').text(total + $('.res').text()*1);
+
+								//飞入购物车的动画
+								let $ani_img = $('<img/>').attr('src','../'+goods.likeImg).css('width',200);
+								let x = e.pageX;
+								let y = e.pageY;
+								$ani_img.css({'position':'relative','left':800,'bottom':200,'z-index':15}).appendTo($('section'));
+								$ani_img.animate({left:x+400,bottom:y+200,width:0},2000)
 							});
 
 						//点击继续购物

@@ -1,5 +1,5 @@
 require(['config'], function() {
-	require(['jquery', 'common'], function($) {
+	require(['jquery', 'common','header'], function($) {
 		jQuery(function($) {
 
 				//获取cookie
@@ -7,7 +7,9 @@ require(['config'], function() {
 				$('.goods').html();
 				let cash = 0;
 				render();
-				
+
+
+				//获取cookie结构渲染进html
 			function render() {
 
 
@@ -38,7 +40,7 @@ require(['config'], function() {
 					let $price = $('<li/>').append($('<span/>').text('￥' + data.price));
 					let $qty = $('<li/>').append($('<span/>').addClass('shuliang').append(($('<input/>').val(data.qty).addClass('num')), $('<i/>').text('+').addClass('add'), $('<i/>').text('-').addClass('reduce')));
 					let $sum = $('<li/>').append($('<span/>').text('￥' ),$('<span/>').text(cash).addClass('sum'));
-					let $sure_remove = $('<div/>').append($('<p/>').text('你确定要删除此商品？'), $('<a/>').attr('href','#').text('确定'),$('<a/>').attr('href','#').text('取消'),$('<i/>'),$('<i/>')).addClass('sure_remove');
+					let $sure_remove = $('<div/>').append($('<p/>').text('你确定要删除此商品？'), $('<a/>').addClass('sure_del').attr('href','#').text('确定'),$('<a/>').attr('href','#').text('取消'),$('<i/>'),$('<i/>')).addClass('sure_remove');
 					let $remove = $('<li/>').append($('<a/>').attr('href', '#').text('移除').addClass('remove'),$sure_remove);
 
 
@@ -47,7 +49,9 @@ require(['config'], function() {
 				})
 				$('.goods')[0].innerHTML = '';
 				$('.goods').append($res);
-
+				if($('.goods')[0].innerHTML === ''){
+				$('.goods').append($('<span/>').text('您没有添加商品进购物车！去'),$('<a/>').attr('href','../index.html').text('逛逛吧').css('color','#e50163'));
+				}
 				let index;
 
 				//点击add添加商品数量并且写进cookie
@@ -56,10 +60,11 @@ require(['config'], function() {
 					var guid = $(target).parent().parent().parent().find('.guid').text();
 					let currNum = target.parentNode.children[0].value * 1;
 					if (target.className === 'add') {
-						target.parentNode.children[0].value++;
+						let add_qty = target.parentNode.children[0].value++;
 						for (let i = 0; i < goodslist.length; i++) {
 							if (goodslist[i].guid == guid) {
-								goodslist[i].qty = target.parentNode.children[0].value;
+								goodslist[i].qty = add_qty+1;
+								// console.log(goodslist[i].qty)
 								cash = goodslist[i].qty * goodslist[i].price;
 								target.parentNode.parentNode.nextSibling.innerText = '￥' + cash;
 								jisuan()
@@ -73,17 +78,18 @@ require(['config'], function() {
 						if (currNum <= 1) {
 							currNum = 1;
 						} else {
-							target.parentNode.children[0].value--;
+							let re_qty = target.parentNode.children[0].value--;
 							for (let i = 0; i < goodslist.length; i++) {
 								if (goodslist[i].guid == guid) {
-									goodslist[i].qty = target.parentNode.children[0].value;
+									// console.log(re_qty-1)
+									goodslist[i].qty = re_qty-1;
 									cash = goodslist[i].qty * goodslist[i].price;
 									target.parentNode.parentNode.nextSibling.innerText = '￥' + cash;
 									jisuan();
 								}
 							}
 
-							document.cookie = 'moon=' + JSON.stringify(goodslist);
+							document.cookie = 'moon=' + JSON.stringify(goodslist)+';path=/';
 						}
 					}
 
@@ -111,8 +117,8 @@ require(['config'], function() {
 				let $totalMoney = $('.sum');
 				for(let i=0;i<$total.length;i++){
 					total += $total[i].value*1;
-
 				for(let j=0;j<goodslist.length;j++){
+					console.log(goodslist[i])
 					totalMoney+=goodslist[j].price*$total[i].value*1;
 					if(goodslist.length===1){
 					$('.resNum').text(totalMoney+ '元')
@@ -124,26 +130,28 @@ require(['config'], function() {
 				}
 				$('.discount').text(total+'件');
 
-				console.log(total)
+				// console.log(total)
 	
 					// console.log(cash)
 				}
 
-				$('.sure_remove').on('click',function(e){
-					let target = e.target;
-					var guid = $(target).parent().parent().parent().find('.guid').text();
-					if(target.innerText === '确定'){
-						for(var i=0;i<goodslist.length;i++){
+				//利用事件监听删除coookie，并写进html
+
+				$('.goods').on('click','.sure_del',function(){
+					let guid = this.parentNode.parentNode.parentNode.dataset.id;
+					console.log(guid)
+					for(var i=0;i<goodslist.length;i++){
 			                if(goodslist[i].guid == guid){
 			                    goodslist.splice(i,1);
 			                    	jisuan();
 			                    break;
 			                }
 			            }
-			                document.cookie = 'moon=' + JSON.stringify(goodslist);
+			                document.cookie = 'moon=' + JSON.stringify(goodslist) + ';path=/';
 			                render();
-					}
 				})
+
+				
 
 				
 

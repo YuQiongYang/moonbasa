@@ -123,6 +123,7 @@ section .goods ul li:nth-of-type(5n) {
 
 section .page {
   margin: 0 auto;
+  margin-bottom: 30px;
   width: 200px;
 }
 

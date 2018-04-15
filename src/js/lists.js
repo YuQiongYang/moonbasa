@@ -1,5 +1,5 @@
 require(['config'], function() {
-	require(['jquery', 'common'], function($) {
+	require(['jquery', 'common','header'], function($) {
 		jQuery(function($) {
 			// $('header').load('../html/header.html');
 

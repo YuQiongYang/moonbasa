@@ -70,6 +70,346 @@ s,i,em{font-style:normal;text-decoration:none;}
 
 /*li只做浮动，a做宽高。*/
 
+.login {
+  background-color: #f6f6f6;
+  border-bottom: 1px solid #ececec;
+}
+
+header .login .left {
+  height: 25px;
+  width: 230px;
+  float: left;
+  background-image: url("../img/head.jpg");
+}
+
+header .login .right {
+  height: 25px;
+  float: right;
+}
+
+header .login .right li {
+  float: left;
+  line-height: 25px;
+  font-size: 12px;
+}
+
+header .login .right li > a {
+  padding: 0 10px;
+  color: #666;
+  border-right: 1px solid #d4d4d4;
+}
+
+header .login .right li > a:hover {
+  color: #c20055;
+}
+
+header .login .right li:nth-of-type(5) > a {
+  background-image: url("../img/phone.jpg");
+  background-repeat: no-repeat;
+  background-position: 10px;
+  padding: 0 10px 0 25px;
+}
+
+header .login .right li:nth-of-type(8) {
+  position: relative;
+}
+
+header .login .right li:nth-of-type(8) > a {
+  border-right: none;
+  background: url("../img/car.jpg") no-repeat 50px;
+  padding: 0 25px 0 10px;
+}
+
+header .login .right li:nth-of-type(8) > div {
+  width: 350px;
+  min-height: 120px;
+  display: none;
+  position: absolute;
+  top: 25px;
+  right: 0;
+  z-index: 10;
+  background-color: #fff;
+  border: 1px solid #f6f6f6;
+  padding: 10px;
+}
+
+header .login .right li:nth-of-type(8) > div > ul > li {
+  margin-bottom: 10px;
+}
+
+header .login .right li:nth-of-type(8) > div > ul > li > a {
+  border-right: none;
+}
+
+header .login .right li:nth-of-type(8) > div > ul > li > a img {
+  width: 50px;
+  float: left;
+}
+
+header .login .right li:nth-of-type(8) > div > ul > li > a > h3 {
+  float: left;
+  width: 160px;
+  line-height: 18px;
+  margin-left: 5px;
+}
+
+header .login .right li:nth-of-type(8) > div > ul > li i {
+  color: red;
+}
+
+header .login .right li:nth-of-type(8) > div > ul > li .num {
+  color: red;
+}
+
+header .login .right li:nth-of-type(8) > div > ul > li .qty {
+  margin-left: 5px;
+}
+
+header .login .right li:nth-of-type(8) > div > ul > li .del {
+  margin-left: 15px;
+  border-right: none;
+}
+
+header .login .right li:nth-of-type(8):hover div {
+  display: block;
+}
+
+header .login .right li:nth-of-type(3) a, header .login .right li:nth-of-type(4) a, header .login .right li:nth-of-type(5) a {
+  position: relative;
+}
+
+header .login .right li:nth-of-type(3) a img, header .login .right li:nth-of-type(4) a img, header .login .right li:nth-of-type(5) a img {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 10;
+}
+
+header .login .right li:nth-of-type(3):hover a img, header .login .right li:nth-of-type(4):hover a img, header .login .right li:nth-of-type(5):hover a img {
+  display: block;
+}
+
+header .nav {
+  background-color: #f6f6f6;
+}
+
+header .nav ul {
+  width: 1072px;
+  margin: 0 auto;
+}
+
+header .nav ul li:nth-of-type(1) {
+  float: left;
+}
+
+header .nav ul li:nth-of-type(1) a {
+  display: block;
+  width: 134px;
+  height: 42px;
+  background: url("../img/nav01.jpg") no-repeat;
+}
+
+header .nav ul li:nth-of-type(1) a:hover {
+  background: url("../img/nav1.jpg") no-repeat;
+}
+
+header .nav ul li:nth-of-type(2) {
+  float: left;
+}
+
+header .nav ul li:nth-of-type(2) a {
+  display: block;
+  width: 134px;
+  height: 42px;
+  background: url("../img/nav02.jpg") no-repeat;
+}
+
+header .nav ul li:nth-of-type(2) a:hover {
+  background: url("../img/nav2.jpg") no-repeat;
+}
+
+header .nav ul li:nth-of-type(3) {
+  float: left;
+}
+
+header .nav ul li:nth-of-type(3) a {
+  display: block;
+  width: 134px;
+  height: 42px;
+  background: url("../img/nav03.jpg") no-repeat;
+}
+
+header .nav ul li:nth-of-type(3) a:hover {
+  background: url("../img/nav3.jpg") no-repeat;
+}
+
+header .nav ul li:nth-of-type(4) {
+  float: left;
+}
+
+header .nav ul li:nth-of-type(4) a {
+  display: block;
+  width: 134px;
+  height: 42px;
+  background: url("../img/nav04.jpg") no-repeat;
+}
+
+header .nav ul li:nth-of-type(4) a:hover {
+  background: url("../img/nav4.jpg") no-repeat;
+}
+
+header .nav ul li:nth-of-type(5) {
+  float: left;
+}
+
+header .nav ul li:nth-of-type(5) a {
+  display: block;
+  width: 134px;
+  height: 42px;
+  background: url("../img/nav05.jpg") no-repeat;
+}
+
+header .nav ul li:nth-of-type(5) a:hover {
+  background: url("../img/nav5.jpg") no-repeat;
+}
+
+header .nav ul li:nth-of-type(6) {
+  float: left;
+}
+
+header .nav ul li:nth-of-type(6) a {
+  display: block;
+  width: 134px;
+  height: 42px;
+  background: url("../img/nav06.jpg") no-repeat;
+}
+
+header .nav ul li:nth-of-type(6) a:hover {
+  background: url("../img/nav6.jpg") no-repeat;
+}
+
+header .nav ul li:nth-of-type(7) {
+  float: left;
+}
+
+header .nav ul li:nth-of-type(7) a {
+  display: block;
+  width: 134px;
+  height: 42px;
+  background: url("../img/nav07.jpg") no-repeat;
+}
+
+header .nav ul li:nth-of-type(7) a:hover {
+  background: url("../img/nav7.jpg") no-repeat;
+}
+
+header .nav ul li:nth-of-type(8) {
+  float: left;
+}
+
+header .nav ul li:nth-of-type(8) a {
+  display: block;
+  width: 134px;
+  height: 42px;
+  background: url("../img/nav08.jpg") no-repeat;
+}
+
+header .nav ul li:nth-of-type(8) a:hover {
+  background: url("../img/nav8.jpg") no-repeat;
+}
+
+header .search_side .logo {
+  float: left;
+}
+
+header .search_side .logo a {
+  display: block;
+  width: 320px;
+  height: 140px;
+  background: url("../img/logo.gif") no-repeat;
+  margin-right: 30px;
+}
+
+header .search_side .search {
+  float: left;
+  margin-right: 70px;
+  margin-top: 35px;
+}
+
+header .search_side .search div {
+  width: 540px;
+  border: 2px solid #e50163;
+}
+
+header .search_side .search div input {
+  height: 33px;
+  width: 449px;
+  padding-left: 5px;
+  box-sizing: border-box;
+  float: left;
+}
+
+header .search_side .search div span {
+  display: inline-block;
+  width: 86px;
+  height: 33px;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  background-color: #e50163;
+  float: right;
+}
+
+header .search_side .search ul li {
+  float: left;
+}
+
+header .search_side .search ul li a {
+  line-height: 28px;
+  font-size: 12px;
+  color: #8d8d8d;
+  border-right: 1px solid #e3e3e3;
+  padding: 0 8px;
+}
+
+header .search_side .search ul li a:hover {
+  color: #e50163;
+}
+
+header .search_side .newgoods {
+  float: right;
+  margin-top: 25px;
+}
+
+footer .m_info {
+  background-color: #ececec;
+}
+
+footer .m_info > ul > li {
+  float: left;
+  padding: 30px 40px;
+}
+
+footer .m_info > ul > li ul li h3 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+footer .m_info > ul > li ul li a {
+  font-size: 12px;
+  line-height: 24px;
+}
+
+footer .foot {
+  width: 995px;
+  height: 287px;
+  background: url(../img/foot.png);
+}
+
+
 
 
 
