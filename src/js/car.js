@@ -32,8 +32,8 @@ require(['config'], function() {
 						type: 'checkbox',
 						checked: 'checked'
 					}));
-					let $img = $('<li/>').append($('<a/>').attr('href', '../html/details.html').append($('<img/>').attr('src', '../' + data.imgurl)));
-					let $name = $('<li/>').append($('<a/>').attr('href', '../html/details.html').append(($('<h3/>').text(data.name)).append($('<i/>').text(data.guid).addClass('guid'))),
+					let $img = $('<li/>').append($('<a/>').attr('href', '../html/details.html?'+data.guid).append($('<img/>').attr('src', '../' + data.imgurl)));
+					let $name = $('<li/>').append($('<a/>').attr('href', '../html/details.html?'+data.guid).append(($('<h3/>').text(data.name)).append($('<i/>').text(data.guid).addClass('guid'))),
 						$('<span/>').text('尺寸：' + data.size), $('<span/>').text('颜色：' + data.color));
 					let $price = $('<li/>').append($('<span/>').text('￥' + data.price));
 					let $qty = $('<li/>').append($('<span/>').addClass('shuliang').append(($('<input/>').val(data.qty).addClass('num')), $('<i/>').text('+').addClass('add'), $('<i/>').text('-').addClass('reduce')));
@@ -65,7 +65,7 @@ require(['config'], function() {
 								jisuan()
 							}
 						}
-						document.cookie = 'moon=' + JSON.stringify(goodslist);
+						document.cookie = 'moon=' + JSON.stringify(goodslist) + ';path=/';
 					}
 
 					//点击reduce减少数量并写进cookie

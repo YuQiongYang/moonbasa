@@ -21,17 +21,17 @@ header .login .right li {
   font-size: 12px;
 }
 
-header .login .right li a {
+header .login .right li > a {
   padding: 0 10px;
   color: #666;
   border-right: 1px solid #d4d4d4;
 }
 
-header .login .right li a:hover {
+header .login .right li > a:hover {
   color: #c20055;
 }
 
-header .login .right li:nth-of-type(5) a {
+header .login .right li:nth-of-type(5) > a {
   background-image: url("../img/phone.jpg");
   background-repeat: no-repeat;
   background-position: 10px;
@@ -42,15 +42,15 @@ header .login .right li:nth-of-type(8) {
   position: relative;
 }
 
-header .login .right li:nth-of-type(8) a {
+header .login .right li:nth-of-type(8) > a {
   border-right: none;
   background: url("../img/car.jpg") no-repeat 50px;
   padding: 0 25px 0 10px;
 }
 
-header .login .right li:nth-of-type(8) div {
+header .login .right li:nth-of-type(8) > div {
   width: 350px;
-  height: 120px;
+  min-height: 120px;
   display: none;
   position: absolute;
   top: 25px;
@@ -58,6 +58,44 @@ header .login .right li:nth-of-type(8) div {
   z-index: 10;
   background-color: #fff;
   border: 1px solid #f6f6f6;
+  padding: 10px;
+}
+
+header .login .right li:nth-of-type(8) > div > ul > li {
+  margin-bottom: 10px;
+}
+
+header .login .right li:nth-of-type(8) > div > ul > li > a {
+  border-right: none;
+}
+
+header .login .right li:nth-of-type(8) > div > ul > li > a img {
+  width: 50px;
+  float: left;
+}
+
+header .login .right li:nth-of-type(8) > div > ul > li > a > h3 {
+  float: left;
+  width: 160px;
+  line-height: 18px;
+  margin-left: 5px;
+}
+
+header .login .right li:nth-of-type(8) > div > ul > li i {
+  color: red;
+}
+
+header .login .right li:nth-of-type(8) > div > ul > li .num {
+  color: red;
+}
+
+header .login .right li:nth-of-type(8) > div > ul > li .qty {
+  margin-left: 5px;
+}
+
+header .login .right li:nth-of-type(8) > div > ul > li .del {
+  margin-left: 20px;
+  border-right: none;
 }
 
 header .login .right li:nth-of-type(8):hover div {

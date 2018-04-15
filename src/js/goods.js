@@ -5,9 +5,9 @@ require(['config'], function() {
 
 			let good_id = location.search.slice(1);
 			$.ajax({
-				url: "../data/likeGoods.json",
+				url: "../api/goods.php",
 				success: function(data) {
-					let data_arr = data.RECORDS;
+					let data_arr = JSON.parse(data);
 					if (good_id) {
 						data_arr.id = good_id;
 						//对应id号的商品信息
@@ -27,10 +27,6 @@ require(['config'], function() {
 								$img.css('border', '1px solid #000');
 								$('.big').children('img').width(385).attr('src', $img[0].src);
 							})
-
-							// $li.on('mouseleave',$img,function(){
-							// 	$img.css('border','none');
-							// })
 							return $li;
 						});
 						$ul_small.append($res).appendTo($('.d_img'));
@@ -125,12 +121,11 @@ require(['config'], function() {
 
 						});
 
-						//放大镜
-						// magnifier($('.big'),385,520,$('.big').children('img')[0].src,100,135,385);
-
-
+						
 						//读取cookie
 						let goodslist = Cookie.get('moon') || [];
+
+
 						if (typeof goodslist === 'string') {
 							goodslist = JSON.parse(goodslist);
 						}
@@ -147,7 +142,6 @@ require(['config'], function() {
 									currSize = $(size[0]).text();
 								}
 							}
-
 							//获取颜色
 
 							let color = $('.color').find('li').children('span');
@@ -183,9 +177,8 @@ require(['config'], function() {
 
 								goodslist.push(moon);
 							}	
-								console.log(goodslist);
-
-							document.cookie = 'moon=' + JSON.stringify(goodslist);
+							console.log(goodslist);
+							document.cookie = 'moon=' + JSON.stringify(goodslist) + ';path=/';
 
 						});
 
@@ -210,12 +203,12 @@ require(['config'], function() {
 
 						//点击立即购买
 							$('.b_n').on('click',function(){
-								$(this).attr('href','../html/shopping_cart.html');
+								$(this).attr('href','../html/car.html');
 							});
 
 						//点击去结账
 							$('.checkout').on('click',function(){
-								$(this).attr('href','../html/shopping_cart.html')
+								$(this).attr('href','../html/car.html')
 							})
 					}
 

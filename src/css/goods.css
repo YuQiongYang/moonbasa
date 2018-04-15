@@ -1,0 +1,453 @@
+section .details .d_img ul li img, section .details .d_con .color ul li span, section .details .buy_cart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+section .logo a {
+  display: block;
+}
+
+section .logo a img {
+  margin: 0 auto;
+}
+
+section nav {
+  border-top: 2px solid #e10164;
+  margin-top: 20px;
+  padding-top: 10px;
+}
+
+section nav .nav li {
+  float: left;
+  margin-right: 60px;
+}
+
+section nav .nav li a {
+  display: block;
+  font-size: 16px;
+  color: #000;
+  line-height: 20px;
+}
+
+section nav .nav li a:hover {
+  color: #aaa;
+}
+
+section nav .nav li:nth-of-type(11) {
+  margin-left: 20px;
+  margin-right: 0px;
+}
+
+section nav .nav li:nth-of-type(11) a {
+  width: 80px;
+  height: 20px;
+  position: relative;
+}
+
+section nav .nav li:nth-of-type(11) a i {
+  font-size: 18px;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 0;
+}
+
+section nav .nav li:nth-of-type(11) a span {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+section nav .nav li:nth-of-type(11):hover i {
+  display: none;
+}
+
+section nav .nav li:nth-of-type(11):hover span {
+  display: block;
+}
+
+section .details {
+  margin-top: 40px;
+}
+
+section .details .d_img .zoom-small {
+  position: relative;
+  overflow: hidden;
+}
+
+section .details .d_img .zoom-small img {
+  display: block;
+}
+
+section .details .d_img .zoom-small img .zoom {
+  display: none;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #fc0;
+  background-color: #ff0;
+  background-color: rgba(255, 255, 0, 0.3);
+  filter: alpha(Opacity=30);
+}
+
+section .details .d_img .xzoom-big {
+  display: none;
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  overflow: hidden;
+}
+
+section .details .d_img .xzoom-big img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+section .details .d_img .big img {
+  width: 385px;
+  height: 520px;
+}
+
+section .details .d_img ul {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+section .details .d_img ul li {
+  float: left;
+  width: 52px;
+  height: 72px;
+  position: relative;
+}
+
+section .details .d_img ul li img {
+  width: 50px;
+}
+
+section .details .d_img ul li:nth-of-type(1) img {
+  border: 1px solid #000;
+}
+
+section .details .d_con {
+  margin-left: 50px;
+  width: 560px;
+}
+
+section .details .d_con h3 {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+section .details .d_con .price {
+  height: 135px;
+  background-color: #f7f7f7;
+  margin-top: 25px;
+  padding-left: 15px;
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+
+section .details .d_con .price .left .sellPrice {
+  display: block;
+}
+
+section .details .d_con .price .left .sellPrice i {
+  font-size: 20px;
+  color: #e50065;
+}
+
+section .details .d_con .price .left .sellPrice > span:nth-of-type(1) {
+  font-size: 36px;
+  color: #e50065;
+  margin-left: 5px;
+}
+
+section .details .d_con .price .left .sellPrice > span:nth-of-type(2) {
+  color: #666;
+  margin-left: 5px;
+}
+
+section .details .d_con .price .left .sellPrice > span:nth-of-type(3) {
+  margin: 0;
+  background-color: #e50065;
+  color: #fff;
+  display: block;
+  height: 18px;
+  width: 40px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 18px;
+  position: relative;
+  top: -45px;
+  left: 100px;
+}
+
+section .details .d_con .price .left .sellPrice > span:nth-of-type(3) > span {
+  display: block;
+  border: 9px solid transparent;
+  border-right: 10px solid #e50065;
+  position: absolute;
+  left: -19px;
+  top: 0px;
+}
+
+section .details .d_con .price .left > span:nth-of-type(2) {
+  display: block;
+  margin-top: 10px;
+  color: #666;
+  font-size: 14px;
+}
+
+section .details .d_con .price .left > span:nth-of-type(2) a {
+  color: #000;
+}
+
+section .details .d_con .price .left > span:nth-of-type(2) a:hover {
+  color: #f00;
+}
+
+section .details .d_con .color {
+  margin-top: 40px;
+}
+
+section .details .d_con .color > span {
+  color: #666;
+  float: left;
+  margin-right: 15px;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+section .details .d_con .color ul {
+  float: left;
+}
+
+section .details .d_con .color ul li {
+  width: 95px;
+  height: 40px;
+  float: left;
+  margin-right: 10px;
+  position: relative;
+}
+
+section .details .d_con .color ul li span {
+  display: block;
+  width: 92px;
+  height: 37px;
+  text-align: center;
+  line-height: 37px;
+  border: 2px solid #ccc;
+  color: #333;
+}
+
+section .details .d_con .color ul li:hover span {
+  color: #e50065;
+  border: 2px solid #e50065;
+}
+
+section .details .d_con .color ul li:nth-of-type(1) span {
+  border: 2px solid #e50065;
+}
+
+section .details .d_con .size {
+  margin-top: 30px;
+}
+
+section .details .d_con .size > span {
+  color: #666;
+  float: left;
+  margin-right: 15px;
+  margin-top: 5px;
+  font-size: 12px;
+  float: left;
+}
+
+section .details .d_con .size ul {
+  width: 200px;
+  float: left;
+}
+
+section .details .d_con .size ul li {
+  width: 42px;
+  height: 30px;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+section .details .d_con .size ul li span {
+  display: block;
+  width: 40px;
+  height: 28px;
+  border: 1px solid #ccc;
+  text-align: center;
+  line-height: 28px;
+  font-size: 12px;
+}
+
+section .details .d_con .size ul li span.rs {
+  border: 1px solid #ccc;
+}
+
+section .details .d_con .size ul li span.active {
+  border: 1px solid  #e50065;
+}
+
+section .details .d_con .size ul li:hover span {
+  color: #e50065;
+}
+
+section .details .d_con .size ul li:nth-of-type(1) span {
+  border: 1px solid  #e50065;
+}
+
+section .details .d_con .size ul li:nth-of-type(4n) {
+  margin-right: 0;
+}
+
+section .details .num {
+  margin-top: 30px;
+}
+
+section .details .num > span:nth-of-type(1) {
+  color: #666;
+  float: left;
+  margin-right: 15px;
+  margin-top: 8px;
+  font-size: 12px;
+  float: left;
+}
+
+section .details .num > span:nth-of-type(2) {
+  display: block;
+  width: 75px;
+  height: 33px;
+  border: 1px solid #ccc;
+  float: left;
+  padding-left: 20px;
+  box-sizing: border-box;
+  line-height: 30px;
+  position: relative;
+}
+
+section .details .num > span:nth-of-type(2) i {
+  display: block;
+  height: 15px;
+  width: 22px;
+  border: 1px solid #ccc;
+  line-height: 15px;
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  float: right;
+  position: absolute;
+  right: -1px;
+}
+
+section .details .num > span:nth-of-type(2) i:nth-of-type(1) {
+  top: -1px;
+}
+
+section .details .num > span:nth-of-type(2) i:nth-of-type(2) {
+  bottom: -1px;
+}
+
+section .details .buy {
+  width: 445px;
+  margin-top: 30px;
+}
+
+section .details .buy a {
+  display: block;
+  width: 205px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 18px;
+}
+
+section .details .buy .b_n {
+  float: left;
+  border: 1px solid #e50065;
+  color: #e50065;
+}
+
+section .details .buy .cart {
+  float: right;
+  background-color: #e50065;
+  color: #fff;
+}
+
+section .details .buy_cart {
+  width: 600px;
+  height: 500px;
+  top: 500px;
+  background-color: #fff;
+  display: none;
+  z-index: 11;
+  border: 1px solid #000;
+  padding-top: 60px;
+  box-sizing: border-box;
+}
+
+section .details .buy_cart > h3 {
+  text-align: center;
+}
+
+section .details .buy_cart > span {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+section .details .buy_cart .success {
+  width: 300px;
+  height: 100px;
+  background: url(../img/logo.gif);
+  margin: 0 auto;
+}
+
+section .details .buy_cart div {
+  width: 300px;
+  height: 50px;
+  margin: 0px auto;
+}
+
+section .details .buy_cart div a {
+  display: block;
+  width: 120px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 18px;
+}
+
+section .details .buy_cart div .reShop {
+  float: left;
+  border: 1px solid #e50065;
+  color: #e50065;
+}
+
+section .details .buy_cart div .checkout {
+  float: right;
+  background-color: #e50065;
+  color: #fff;
+}
+
+section .details .back {
+  width: 100%;
+  height: 1000px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.3);
+  display: none;
+}

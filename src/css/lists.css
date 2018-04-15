@@ -1,0 +1,144 @@
+section .search {
+  border: 2px solid #ccc;
+}
+
+section .search > span {
+  display: block;
+  width: 110px;
+  height: 110px;
+  background-color: #f2f2f2;
+  float: left;
+  text-align: center;
+  line-height: 110px;
+  font-size: 18px;
+}
+
+section .search .brand {
+  float: left;
+  width: 815px;
+  margin-left: 20px;
+  margin-top: 8px;
+}
+
+section .search .brand li {
+  float: left;
+  width: 161px;
+  height: 45px;
+  position: relative;
+}
+
+section .search .brand li:hover img {
+  display: block;
+  z-index: 2;
+}
+
+section .search .brand li > span {
+  display: block;
+  width: 160px;
+  height: 45px;
+  border: 1px solid #ccc;
+  text-align: center;
+  line-height: 46px;
+  font-size: 14px;
+}
+
+section .search .brand li img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+section .filter {
+  width: 330px;
+  margin-top: 20px;
+}
+
+section .filter a {
+  display: block;
+  width: 100px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  background-color: #e50163;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 5px;
+  float: left;
+  margin-right: 10px;
+}
+
+section .goods {
+  margin-top: 15px;
+}
+
+section .goods ul li {
+  float: left;
+  margin-right: 8px;
+  border: 1px solid #dfdfdf;
+  margin-bottom: 15px;
+}
+
+section .goods ul li > a:nth-of-type(1) {
+  display: block;
+  width: 231px;
+  height: 400px;
+}
+
+section .goods ul li > a:nth-of-type(1) img {
+  width: 231px;
+  margin-bottom: 10px;
+}
+
+section .goods ul li > a:nth-of-type(1) div {
+  padding: 0 10px;
+}
+
+section .goods ul li > a:nth-of-type(1) div span:nth-of-type(1) {
+  color: #e50163;
+}
+
+section .goods ul li > a:nth-of-type(1) div p {
+  font-size: 14px;
+  margin-top: 8px;
+  color: #333;
+  font-size: 14px;
+}
+
+section .goods ul li a:nth-of-type(2) {
+  display: block;
+  padding: 5px 8px;
+  border-top: 1px solid #dfdfdf;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+section .goods ul li:hover {
+  border: 1px solid #e50163;
+}
+
+section .goods ul li:nth-of-type(5n) {
+  margin-right: 0;
+}
+
+section .page {
+  margin: 0 auto;
+  width: 200px;
+}
+
+section .page span {
+  display: block;
+  float: left;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #ddd;
+  margin-right: 15px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 16px;
+}
+
+section .page span.active {
+  background-color: #ddd;
+  color: #fff;
+}

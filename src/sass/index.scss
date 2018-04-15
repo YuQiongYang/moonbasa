@@ -24,7 +24,7 @@ header {
 				line-height: 25px;
 				font-size: 12px;
 
-				a {
+				>a {
 					padding: 0 10px;
 					color: #666;
 					border-right: 1px solid #d4d4d4;
@@ -38,7 +38,7 @@ header {
 			}
 
 			li:nth-of-type(5) {
-				a {
+				>a {
 					background-image: url('../img/phone.jpg');
 					background-repeat: no-repeat;
 					background-position: 10px;
@@ -50,15 +50,15 @@ header {
 			li:nth-of-type(8) {
 				position: relative;
 
-				a {
+				>a {
 					border-right: none;
 					background: url('../img/car.jpg') no-repeat 50px;
 					padding: 0 25px 0 10px;
 				}
 
-				div {
+				>div {
 					width: 350px;
-					height: 120px;
+					min-height: 120px;
 					display: none;
 					position: absolute;
 					top: 25px;
@@ -66,6 +66,41 @@ header {
 					z-index: 10;
 					background-color: #fff;
 					border: 1px solid $headColor;
+					padding:10px;
+
+					>ul{
+						>li{
+							margin-bottom:10px;
+							>a{
+								border-right:none;
+								img{
+								width:50px;
+								float:left;
+							}
+							>h3{
+								float:left;
+								width:160px;
+								line-height:18px;
+								margin-left:5px;
+							}	
+							}
+
+							i{
+								color:red;
+							}
+							.num{
+								color:red;
+							}
+							.qty{
+								margin-left:5px;
+							}
+							.del{
+								margin-left:20px;
+								border-right:none;
+							}
+
+						}
+					}
 				}
 
 				&:hover {

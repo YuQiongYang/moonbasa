@@ -173,6 +173,7 @@ var Cookie = {
 				return arr[1];
 			}
 		}
+		return 666;
 	},
 
 	/**
